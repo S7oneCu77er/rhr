@@ -1,0 +1,2688 @@
+/* css/styles.css */
+
+html {
+    font-size: 15px; /* Base font size */
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: auto;
+    font-family: 'Consolas', sans-serif;
+    color: #333333;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    overflow: hidden;
+    height: 100%;
+    background-color: #777777;
+}
+
+div {
+    user-select: none; /* Prevents text selection */
+}
+
+.container {
+    padding: 4px;
+    text-align: center;
+    overflow-y: auto;
+    justify-content: center;
+    box-sizing: border-box;
+    width: calc(100% - 10px);
+    height: calc(100% - 25px);
+    max-height: 100vh;
+    background-color: #dFdFdF;
+    border-radius: 15px;
+    margin: 5px 5px auto 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+    border: 1px solid dimgray;
+}
+
+.page {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 auto;
+    margin-bottom: 5px;
+    overflow-y: auto;
+}
+
+.login_page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 95vw;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+
+.hours_page {
+    text-align: center;
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    width: 100%;
+    align-items: end;
+    flex-direction: row;
+    flex: 1 1 auto;
+    margin-bottom: 5px;
+}
+
+.history_page {
+    text-align: center;
+    display: flex;
+    height: 47.5vh;
+    justify-content: space-around;
+    width: 100%;
+    align-items: start;
+    flex-direction: row;
+    overflow-y: auto;  /* Force vertical scroll */
+    overflow-x: hidden; /* disable horizontal scroll */
+    margin-top: 5px;
+    flex: 1 1 auto;
+}
+
+
+
+.edit_view_shifts {
+    text-align: center;
+    display: flex;
+    height: 40vh;
+    justify-content: space-around;
+    width: 100%;
+    align-items: start;
+    flex-direction: row;
+    overflow-y: auto;  /* Force vertical scroll */
+    overflow-x: hidden; /* disable horizontal scroll */
+    margin-top: 5px;
+    flex: 1 1 auto;
+}
+
+.user-list {
+    text-align: center;
+    display: flex;
+    height: 47.5vh;
+    justify-content: space-around;
+    width: 100%;
+    align-items: start;
+    flex-direction: row;
+    overflow-y: auto;  /* Force vertical scroll */
+    overflow-x: hidden; /* disable horizontal scroll */
+    margin-top: 5px;
+    flex: 1 1 auto;
+}
+
+.site-list {
+    text-align: center;
+    display: flex;
+    height: 47.5vh;
+    justify-content: space-around;
+    width: 100%;
+    align-items: start;
+    flex-direction: row;
+    overflow-y: auto;  /* Force vertical scroll */
+    overflow-x: hidden; /* disable horizontal scroll */
+    margin-top: 5px;
+    font-size: 0.8rem;
+    flex: 1 1 auto;
+}
+
+.manage_shift_btn,
+.manage_shift_btn img
+{
+    height: 22px;
+    width: 22px;
+    margin-bottom: -3px;
+}
+
+.document_page {
+    text-align: center;
+    display: flex;
+    height: 48vh;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    flex: 1 1 auto;
+}
+
+.admin_page {
+    text-align: center;
+    display: flex;
+    height: 30vh;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    flex: 1 1 auto;
+}
+
+.admin_page div {
+    width: 85px;
+    height: 85px;
+    background: transparent;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    color: black;
+    position: relative;
+    margin: 2px;
+    padding: 5px;
+    border: 2px #555555 solid;
+    border-radius: 20px; /* Slightly rounded corners */
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4); /* Optional shadow to make it stand out */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 0.85rem;
+
+    background: radial-gradient(circle, #72adff , rgba(0,86,179, 0.8) );
+}
+
+
+#admin_page_disabled_div {
+    width: 90px;
+    height: 90px;
+    background: transparent ;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+    margin: 4px;
+    padding: 5px;
+
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 0.85rem;
+
+    background-image: url('../img/square_2.png'); /* Set the image */
+    background-size: 120px 120px; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image in the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+#smart_report_buttons {
+    width: 65px;
+    height: 65px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+    padding: 5px;
+    border: 3px #000000 solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 0.8rem;
+
+
+    background-color: rgba(150, 255, 25, 0.6);
+    background-image: url('../img/generate.png');
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat; cursor: pointer;
+}
+
+.admin_page img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+}
+
+.admin_page a {
+    color: black;
+    position: absolute;   /* Allow the <a> tag to fill the entire div */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;        /* Use flexbox to center content */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    text-align: center;   /* Ensure text is centered */
+}
+
+#shift_start,
+#shift_end {
+    width: 47%;
+    height: 50px;
+    background: linear-gradient(-135deg, lightgreen, greenyellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px black solid;
+    transition: background 0.3s ease; /* Smooth transition for color change */
+}
+
+#shift_start button,
+#shift_end button{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(-135deg, lightgreen, greenyellow);
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 0 black solid;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    color: black; /* Inherit text color */
+    outline: none; /* Remove focus outline */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Consolas', sans-serif;
+}
+
+#shift_start button:active {
+    background: linear-gradient(-135deg, darkgreen, lightgreen); /* Change to a new gradient or solid color */
+}
+
+#shift_end button:active {
+    background: linear-gradient(135deg, darkred, firebrick); /* Change to a new gradient or solid color */
+}
+
+#shift_end,
+#shift_end button {
+    background: linear-gradient(135deg, indianred, firebrick);
+}
+
+.full-link {
+
+}
+
+#shift_start a,
+#shift_end a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Remove underline */
+    color: black; /* Inherit text color */
+    outline: none; /* Remove focus outline */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Consolas', sans-serif;
+}
+
+#shift_timer {
+    width: 75px;
+    height: 50px;
+    background: linear-gradient(90deg, cornflowerblue, midnightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px black solid;
+}
+
+.hours_page a {
+    color: black;
+    text-decoration: none;
+}
+
+.welcome {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.location {
+    font-size: 0.95rem;
+}
+
+.menu_top,
+.menu_bottom{
+    text-align: center;
+    display: flex;
+    height: 46px;
+    justify-content: space-around;
+    align-items: end;
+    padding: 1px;
+    position: relative;
+    top: 0;
+    flex: 0 0 auto;
+}
+
+.menu_top {
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+.menu_bottom {
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+.menu_top a:any-link,
+.menu_bottom a:any-link {
+    color: #dddddd;
+    text-decoration: none;
+
+}
+
+.menu_top div,
+.menu_bottom div {
+    width: 23%;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    margin: 1px;
+
+    border: 1px black solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: all 0.4s ease; /* Smooth transitions for hover effect */
+    font-size: 0.8rem;
+}
+
+#selected {
+    background: linear-gradient(180deg, #003c90, steelblue); /* Subtle gradient from lighter to darker blue */
+}
+
+#selected_big {
+    width: calc(48% + 2px);
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    margin: 1px;
+
+    border: 1px black solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 0.81rem;
+
+    background: linear-gradient(180deg, #003c90, steelblue); /* Subtle gradient from lighter to darker blue */
+}
+
+#big_menu_button {
+    width: calc(48% + 2px);
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    margin: 1px;
+
+    border: 1px black solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 0.81rem;
+
+    background-image: url('../img/square.png'); /* Set the image */
+    background-size: 200% 200%; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image in the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.menu_top a,
+.menu_bottom a {
+    color: white;
+    text-decoration: none;
+    position: absolute;   /* Allow the <a> tag to fill the entire div */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;        /* Use flexbox to center content */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    text-align: center;   /* Ensure text is centered */
+}
+
+/* Logo */
+.logo-container {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.logo {
+    width: 225px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Form Group */
+.form-group {
+    margin-top: 11vh;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem; /* Responsive font size */
+}
+
+input, input[type="file"] {
+    width: calc(100% - 50px);
+    padding-top: 5px !important;
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    font-size: 1.0rem;
+}
+
+
+input:not([type="submit"]):not([type="file"]):not([type="checkbox"]):read-only,
+input:not([type="submit"]):not([type="file"]):not([type="checkbox"]):disabled {
+    background: linear-gradient(180deg, #888888, rgba(70, 100, 150, 0.5)) !important;
+    cursor: not-allowed;
+}
+
+/* Password Group */
+.password-group {
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+
+.passport {
+    width: calc(90vw - 35px); /* Adjust width to fit the button */
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+.password {
+    width: calc(90vw - 35px); /* Adjust width to fit the button */
+    padding-left: 35px;
+    padding-right: 35px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+.toggle {
+    position: absolute;
+    right: -20px;
+    top: -3.5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Language Section */
+.language {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+    direction: ltr;
+}
+
+.language .flag_img {
+    margin: 0 12px 0 12px;
+    width: 35px;
+    height: 35px;
+    border: none; /* Remove any border around the image */
+    outline: none; /* Remove any outline */
+    -webkit-tap-highlight-color: transparent; /* Remove highlight on tap for mobile devices */
+    box-shadow: none;
+}
+
+.language a a:active a:focus {
+    outline: none; /* Remove focus outline */
+    -webkit-tap-highlight-color: transparent; /* Remove highlight on tap for mobile devices */
+    box-shadow: none;
+
+}
+
+/* Login Button */
+.form-login {
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.login {
+    width: 90%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 0 0 auto;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.login:hover {
+    background-color: #004bb5;
+}
+
+/* Landscape Warning */
+.landscape-warning {
+    display: none;
+}
+
+@media (orientation: landscape) {
+    .landscape-warning {
+        display: block;
+        background-color: #ffcdd2;
+        padding: 16px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.error {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.error-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+.close {
+    color: #aaa;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* General table styles */
+.alert-list,
+.assign-list,
+.document-list{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;  /* Force vertical scroll */
+    overflow-x: hidden; /* disable horizontal scroll */
+    flex: 1 1 auto;
+}
+
+.alert-list, .document-list {
+    text-align: center;
+    display: flex;
+    height: 47.5vh;
+    justify-content: space-around;
+    width: 100%;
+    align-items: start;
+    flex-direction: row;
+    margin-top: 5px;
+    flex: 1 1 auto;
+}
+
+.alert-list table,
+.assign-list table,
+.document-list table,
+.edit_view_shifts table,
+.history_page table,
+.user-list table,
+.site-list table
+{
+    width: 95vw;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    table-layout: auto;
+}
+
+.alert-list td,
+.assign-list td,
+.document-list td,
+.edit_view_shifts td,
+.history_page td,
+.user-list td,
+.site-list td
+{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.72rem;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.alert-list td,
+.document-list td {
+    padding: 5px;
+}
+.assign-list td {
+    padding: 5px;
+    background: linear-gradient(180deg, greenyellow, lawngreen);
+    border-radius: 10px; /* Slightly rounded corners */
+    height: 25px;
+    font-size: 0.75rem;
+}
+
+.alert-list th,
+.assign-list th,
+.document-list th,
+.edit_view_shifts th,
+.history_page th,
+.user-list th,
+.site-list th
+{
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bolder;
+    font-size: 0.78rem;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.history_page th {
+    background-color: #CCCCCC;
+}
+
+.alert-list th,
+.document-list th {
+    padding: 5px;
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+.assign-list th {
+    padding: 5px;
+}
+
+.alert-list td
+{
+    background: linear-gradient(180deg, lightcoral, indianred);
+    border-radius: 5px; /* Slightly rounded corners */
+    height: 25px;
+    font-size: 0.76rem;
+    color: black;
+}
+
+#warning_td
+{
+    background: linear-gradient(180deg, orange, coral);
+    border-radius: 5px; /* Slightly rounded corners */
+    height: 25px;
+    font-size: 0.76rem;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease; /* Smooth transition for color change */
+}
+
+#action_td
+{
+    background: linear-gradient(180deg, lightcoral, indianred);
+    border-radius: 5px; /* Slightly rounded corners */
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.76rem;
+
+    transition: background 0.3s ease; /* Smooth transition for color change */
+}
+
+#action_warning_td
+{
+    background: linear-gradient(180deg, orange, coral);
+    border-radius: 5px; /* Slightly rounded corners */
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.76rem;
+
+    transition: background 0.3s ease; /* Smooth transition for color change */
+}
+
+.alert-list a,
+.assign-list a,
+.document-list a,
+.edit_view_shifts a,
+.history_page a,
+.user-list a,
+.site-list a
+{
+    color: aqua;
+    text-decoration: none;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.alert-list a {
+    color: black;
+}
+
+.alert-list a:hover,
+.assign-list a:hover,
+.document-list a:hover,
+.edit_view_shifts a:hover,
+.history_page a:hover,
+.user-list a:hover,
+.site-list a:hover
+{
+    text-decoration: underline;
+}
+
+
+@media (pointer: coarse) {
+    a:active, a:focus {
+        outline: none;
+        box-shadow: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+.up_file{
+    text-align: center;
+    color: black;
+    position: relative;
+    font-weight: bold;
+
+
+    border: 1px #dddddd solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 1rem;
+
+    width: 90%;
+    margin-bottom: 15px;
+
+    /*background: linear-gradient(180deg, dodgerblue, steelblue); /* Subtle gradient from lighter to darker blue */
+}
+
+.up_file_label{
+
+    margin-top: 30px;
+}
+
+select.up_file {
+    height: 38px;
+    width: 93%;
+}
+
+.up_file_button{
+    text-align: center;
+    color: black;
+    position: relative;
+    font-weight: bold;
+
+
+    border: 1px #dddddd solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 1rem;
+
+    width: 92%;
+    margin-top: 50px;
+
+    /*background: linear-gradient(180deg, dodgerblue, steelblue); /* Subtle gradient from lighter to darker blue */
+}
+
+
+#month, #year, #worker_id, #worker_name {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin: 5px;
+    font-weight: bold;
+
+
+    border: 1px #dddddd solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    font-size: 0.81rem;
+}
+
+/* Specific styling for placeholder text */
+#worker_id::placeholder,
+#worker_name::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+#worker_name {
+    width: 120px;
+    height: 1px;
+}
+
+#month option, #year option, #worker_id option {
+
+    color: black;
+    font-weight: bold;
+}
+
+#view_shifts  {
+    width: 55%;
+    height: 30px;
+    background: linear-gradient(-135deg, lightgreen, greenyellow);
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px black solid;
+    transition: background 0.3s ease; /* Smooth transition for color change */
+
+    text-align: center;
+
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#new_shift  {
+    width: 24%;
+    height: 30px;
+    background: linear-gradient(-135deg, royalblue, dodgerblue);
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px black solid;
+    transition: background 0.3s ease; /* Smooth transition for color change */
+
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.edit-car-page {
+    width: 100%;
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
+
+.edit-car-page th, .edit-car-page input, .edit-car-page button {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.80rem;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-bottom: 1px solid #ddd;
+}
+
+.edit-car-page td, .edit-car-page input, .edit-car-page button {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.80rem;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-bottom: 1px solid #ddd;
+    height: 15px;
+}
+
+
+#add-worker-set {
+    /* Reset all inherited styles */
+    all: unset;
+
+    /* Size of the badge */
+    width: 20px;
+    height: 20px;
+
+    /* Flexbox centering for the number */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    /* Now define the display properties */
+    position: relative;
+    top: 3px; /* Adjust to your desired positioning within the menu item */
+    right: 3px;
+
+    /* Look and feel */
+    background: rgba(100, 200, 100, 0.8);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    /* Reset text-specific styles */
+    text-align: center;
+    line-height: 1;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+
+
+    /* Reset box model properties */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Layering */
+    z-index: 0; /* Ensure it appears above other elements */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Optional shadow to make it stand out */
+}
+
+#remove-worker-set {
+    /* Reset all inherited styles */
+    all: unset;
+
+    /* Size of the badge */
+    width: 20px;
+    height: 20px;
+
+    /* Flexbox centering for the number */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    /* Now define the display properties */
+    position: relative;
+    top: 3px; /* Adjust to your desired positioning within the menu item */
+    right: 3px;
+
+    /* Look and feel */
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    /* Reset text-specific styles */
+    text-align: center;
+    line-height: 1;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+
+
+    /* Reset box model properties */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Layering */
+    z-index: 0; /* Ensure it appears above other elements */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Optional shadow to make it stand out */
+}
+
+.worker_request_page {
+
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    font-size: 0.82rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: auto;  /* Force vertical scroll */
+    overflow-x: hidden; /* disable horizontal scroll */
+    flex: 1 1 auto;
+    height: 28vh;
+}
+
+.edit-user-page {
+    text-align: center;
+    width: 100vw;
+    align-items: center;
+    font-size: 0.82rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: auto;  /* Force vertical scroll */
+    overflow-x: hidden; /* disable horizontal scroll */
+    flex: 1 1 auto;
+    height: 27.5vh;
+}
+
+.edit-user-page table,
+.worker_request_page table {
+
+    align-items: center;
+    text-align: center;
+    width: 94vw;
+    padding-bottom: 5px;
+    font-size: 0.8rem;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+.edit-user-page td,
+.worker_request_page td {
+
+    align-items: center;
+    text-align: center;
+    font-size: 0.78rem;
+}
+
+.edit-user-page select, .edit-user-page option, .edit-user-page input, .edit-user-page button,
+.worker_request_page select, .worker_request_page option, .worker_request_page input, .worker_request_page button {
+    text-align: center;
+    text-align-last: center;
+    -webkit-text-align-last: center;
+    color: black;
+    font-weight: bold;
+    height: 15px;
+    font-size: 0.75rem;
+    border: 1px #dddddd solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    padding: 4px;
+    width: 85%;
+    margin-bottom: 3px;
+}
+
+.edit-user-page button,
+.worker_request_page button {
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;
+    height: 35px;
+    width: 91%;
+}
+
+.edit-user-page label,
+.worker_request_page label {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+.edit-user-page select,
+.worker_request_page select {
+    height: 30px;
+    padding: 4px;
+}
+
+.edit-user-page input, .edit-user-page select,
+.worker_request_page input, .worker_request_page select{
+    margin-bottom: 2.5px;
+}
+
+
+
+
+
+.edit-house-page {
+    text-align: center;
+    height: 8vh;
+    width: 100vw;
+    align-items: center;
+    font-size: 0.82rem;
+    flex: 1 1 auto;
+    overflow-y: auto;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    overflow-x: hidden; /* disable horizontal scroll */
+
+}
+
+.edit-house-page table {
+
+    align-items: center;
+    text-align: center;
+    width: 95vw;
+    padding-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.edit-house-page select, .edit-house-page option, .edit-house-page input, .edit-house-page button {
+    text-align: center;
+    text-align-last: center;
+    -webkit-text-align-last: center;
+    color: black;
+    font-weight: bold;
+    height: 15px;
+    font-size: 0.80rem;
+    border: 1px #DDDDDD solid;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effect */
+    padding: 5px;
+    width: 80%;
+    /* background: linear-gradient(180deg, dodgerblue, steelblue); /* Subtle gradient from lighter to darker blue */
+}
+
+.edit-house-page button {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    height: 35px;
+    width: 95%;
+}
+
+.edit-house-page label {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+.edit-house-page select {
+    height: 30px;
+    width: 89%;
+}
+
+.edit-house-page input, .edit-house-page select{
+    margin-bottom: 3px;
+}
+
+#btn-update {
+    /* background: linear-gradient(180deg, lawngreen, darkolivegreen); /* Subtle gradient from lighter to darker blue */
+    background-color: #0056b3;
+    border: 2px solid #AAAAAA;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+/* Hide scrollbar but allow scrolling */
+* {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile devices */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+footer {
+    position: relative;
+    color: #f5f5f5;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: -29px;
+    letter-spacing: 2px;
+}
+
+#lang_boxes {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 0.6rem; /* Smaller font size for compactness */
+    border: 2px silver solid; /* Keep the border thin */
+    border-radius: 4px; /* Less rounded for compact look */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    transition: all 0.3s ease;
+    background: linear-gradient(180deg, dodgerblue, steelblue); /* Gradient retained */
+}
+
+
+/* Styles for the languages checkboxes */
+.languages-container {
+    display: flex;
+    width: 95vw;
+    justify-content: space-between; /* Centers the checkboxes */
+    align-items: center;
+    text-align: center;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+}
+.languages-container label {
+    display: flex;
+    align-items: center;
+    color: black;
+    background: #FFFFFF;
+    border: 1px #DDDDDD solid;
+    padding: 0 1px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    min-width: fit-content;
+    width: 11%;
+    max-width: 11%;
+    cursor: pointer;
+    justify-content: center;
+    height: 35px;
+
+}
+
+.languages-container input[type="checkbox"] {
+    width: 6px;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* Optional: Increase size of checkbox when checked for better visibility */
+.languages-container input[type="checkbox"]:checked {
+    width: 12px;
+    accent-color: #4CFF50;
+    box-shadow: none;
+}
+
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+
+.whatsapp-icon {
+    position: absolute;
+    right: 7.5%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+.whatsapp-icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.sort-icon {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    color: #444; /* Icon color */
+    vertical-align: middle;
+}
+
+.sort-icon:hover {
+    color: #000; /* Icon color on hover */
+}
+
+a, a:visited, a:hover, a:active, a:focus, a:any-link {
+    color: black;
+    text-decoration: underline;
+}
+
+.assignment-header {
+    cursor: pointer;
+}
+.assignment-details td {
+    background-color: #f9f9f9;
+}
+.assignment-details ul {
+    margin: 0;
+    padding: 0;
+}
+.assignment-details li {
+    margin-bottom: 10px;
+}
+
+.menu_bottom div {
+    position: relative;
+}
+
+
+#admin-menu-badge {
+    /* Reset all inherited styles */
+    all: unset;
+
+    /* Now define the display properties */
+    position: relative;
+    top: 0; /* Adjust to your desired positioning within the menu item */
+
+    /* Size of the badge */
+    width: 45px;
+    height: calc(100% + 2px);
+
+    /* Flexbox centering for the number */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Look and feel */
+    background: rgba(0,86,179, 1);
+    color: white;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 0.70rem;
+    font-weight: bold;
+
+    background-image: url('../img/up.png'); /* Set the image */
+    background-size: 25px 25px; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image in the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+
+    /* Reset text-specific styles */
+    text-align: center;
+    line-height: 1;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+
+
+    /* Reset box model properties */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Layering */
+    z-index: 9999; /* Ensure it appears above other elements */
+
+    cursor: pointer;
+}
+
+#admin_menu_btn {
+    /* Reset inherited text properties */
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+#admin-menu-list {
+    /* Reset all inherited styles */
+    all: unset;
+
+    /* Now define the display properties */
+    position: relative;
+    bottom: 250px; /* Adjust to your desired positioning within the menu item */
+
+    /* Size of the badge */
+    width: 45px;
+    height: 0;
+    max-height: 0;
+    transform: scaleY(0); /* Initially scaled down */
+    transform-origin: top;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    /* Flexbox centering for the number */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    /* Look and feel */
+    color: white;
+    border-radius: 20px;
+    border: none !important;/* 1px solid black; *
+    font-size: 0.70rem;
+    font-weight: bold;
+
+    /* Reset text-specific styles */
+    text-align: center;
+    line-height: 1;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+
+
+    /* Reset box model properties */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Layering */
+    z-index: 0; /* Ensure it appears above other elements */
+    /*box-shadow: 0 1px 15px rgba(0, 0, 0, 0.7); /* Optional shadow to make it stand out */
+
+    /*background: rgba(0,86,179, 1);*/
+}
+
+#admin_menu_item {
+
+    width: 35px;
+    height: 35px;
+
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+
+    text-align: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 0;
+
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: radial-gradient(circle, #80b5ff , rgba(0,86,179, 1) );
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Optional shadow to make it stand out */
+}
+
+#admin_menu_item:hover {
+    background: radial-gradient(circle, #bad7ff, rgba(0,86,200, 1) );
+}
+
+#notification-badge {
+    /* Reset all inherited styles */
+    all: unset;
+
+    /* Now define the display properties */
+    position: absolute;
+    bottom: 3px; /* Adjust to your desired positioning within the menu item */
+    right: 3px; /* Adjust to your desired positioning within the menu item */
+
+    /* Size of the badge */
+    width: 20px;
+    height: 20px;
+
+    /* Flexbox centering for the number */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Look and feel */
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border-radius: 50%;
+    border: 1px solid yellow;
+    font-size: 0.70rem;
+    font-weight: bold;
+
+    /* Reset text-specific styles */
+    text-align: center;
+    line-height: 1;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+
+
+    /* Reset box model properties */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Layering */
+    z-index: 9999; /* Ensure it appears above other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow to make it stand out */
+}
+
+#notification-badge_menu {
+    /* Reset all inherited styles */
+    all: unset;
+
+    /* Now define the display properties */
+    position: absolute;
+    bottom: 50.5px; /* Adjust to your desired positioning within the menu item */
+    right: -1px; /* Adjust to your desired positioning within the menu item */
+
+    /* Size of the badge */
+    width: 12px;
+    height: 12px;
+
+    /* Flexbox centering for the number */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Look and feel */
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border-radius: 50%;
+    border: 1px solid yellow;
+    font-size: 0.5rem;
+    font-weight: bold;
+
+    /* Reset text-specific styles */
+    text-align: center;
+    line-height: 1;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+
+
+    /* Reset box model properties */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Layering */
+    z-index: 9999; /* Ensure it appears above other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow to make it stand out */
+}
+
+#notification-badge_admin {
+    /* Reset all inherited styles */
+    all: unset;
+
+    /* Now define the display properties */
+    position: absolute;
+    bottom: 1px; /* Adjust to your desired positioning within the menu item */
+    right: 1px; /* Adjust to your desired positioning within the menu item */
+
+    /* Size of the badge */
+    width: 20px;
+    height: 20px;
+
+    /* Flexbox centering for the number */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Look and feel */
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border-radius: 50%;
+    border: 1px solid yellow;
+    font-size: 0.70rem;
+    font-weight: bold;
+
+    /* Reset text-specific styles */
+    text-align: center;
+    line-height: 1;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+
+
+    /* Reset box model properties */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Layering */
+    z-index: 9999; /* Ensure it appears above other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow to make it stand out */
+}
+
+/* Optional style for the number inside the badge */
+#notification-number {
+    /* Reset inherited text properties */
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+input[type="date"], select {
+    text-align: center !important;
+    text-align-last: center !important;
+}
+
+.search-icon {
+    height: 12px;
+    width: 12px;
+}
+
+.search-undo {
+    height: 12px;
+    width: 12px;
+}
+
+#admin_menu_img {
+    width: 50px;
+    height: 50px;
+}
+
+#small_whatsapp_icon {
+    height: 10px;
+    width: 10px;
+}
+
+/* Digital console style for gauges */
+.gauge-container {
+    width: 110px;
+    height: 55px;
+    background: radial-gradient(circle, #aaaaaa, #666666); /* Dark background with a radial gradient */
+    border-radius: 100px 100px 0 0;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #444; /* Darker border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+}
+
+.gauge {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 100% 100%);
+}
+
+.gauge-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(0, 0, 255, 0.25), rgba(102, 204, 255, 1));
+    border-radius: 100px 100px 0 0;
+    z-index: 1;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Glow effect */
+}
+
+.gauge-value {
+    position: absolute;
+    bottom: 66.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: bold;
+    color: #CCCCCC; /* Neon green text for a digital look */
+    text-shadow: 0 0 6px rgba(90, 200, 255, 1); /* Glow effect */
+    z-index: 2;
+}
+
+.needle {
+    position: absolute;
+    width: 0.2px; /* Slightly thinner needle */
+    height: 70%; /* Adjust needle length */
+    background-color: #f44336; /* Red needle */
+    border-radius: 3px;
+    top: 30%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: rotate(-90deg);
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
+
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9); /* Softer shadow */
+}
+
+/* Glass effect for the gauge overlay */
+.gauge-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Slight white overlay for glass effect */
+    border-radius: 100px 100px 0 0;
+    z-index: 3;
+}
+
+/* Markers for every 10% around the gauge */
+.marker-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.marker {
+    position: absolute;
+    width: 2%;
+    height: 15%; /* Marker length (15% of the gauge height) */
+    background-color: white;
+    top: 83%;
+    left: 49%;
+    transform-origin: bottom center;
+    box-shadow: 0 0 10px rgba(130, 200, 255, 1); /* Softer shadow */
+}
+
+.marker[data-position="0"] {
+    transform: rotate(-90deg) translateY(-600%);
+}
+
+.marker[data-position="10"] {
+    transform: rotate(-72deg) translateY(-600%);
+}
+
+.marker[data-position="20"] {
+    transform: rotate(-54deg) translateY(-600%);
+}
+
+.marker[data-position="30"] {
+    transform: rotate(-36deg) translateY(-600%);
+}
+
+.marker[data-position="40"] {
+    transform: rotate(-18deg) translateY(-600%);
+}
+
+.marker[data-position="50"] {
+    transform: rotate(0deg) translateY(-600%);
+}
+
+.marker[data-position="60"] {
+    transform: rotate(18deg) translateY(-600%);
+}
+
+.marker[data-position="70"] {
+    transform: rotate(36deg) translateY(-600%);
+}
+
+.marker[data-position="80"] {
+    transform: rotate(54deg) translateY(-600%);
+}
+
+.marker[data-position="90"] {
+    transform: rotate(72deg) translateY(-600%);
+}
+
+.marker[data-position="100"] {
+    transform: rotate(90deg) translateY(-600%);
+}
+/* Center the content of the table cells */
+
+
+.gauge-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Font for digital display (add it as a web font if needed) */
+@font-face {
+    font-family: 'Digital';
+    src: url('https://fonts.cdnfonts.com/s/16556/DigitaldreamSkewNarrow-BWqOd.ttf') format('truetype');
+}
+
+#top_menu_button {
+    height: 50px;
+    width: 50px;
+}
+
+#top_menu_button_search {
+    height: 50px;
+    width: 50px;
+}
+
+
+
+/* 1. Styles for Desktop (large screens) */
+@media only screen and (min-width: 720px)
+{
+    body, .welcome {
+        font-size: 0.95rem;
+    }
+
+    .gauge-container {
+        height: 110px;
+        width: 220px;
+    }
+
+    .gauge-value {
+        font-size: 0.95rem !important;
+        bottom: 75% !important;
+    }
+
+    .needle {
+        height: 80%;
+        top: 20%;
+    }
+
+    .whatsapp-icon {
+        top: 3.8px;
+        right: 2.75vw;
+    }
+
+    .whatsapp-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #small_whatsapp_icon {
+        height: 17px;
+        width: 17px;
+    }
+
+    .alert-list th,
+    .assign-list th,
+    .document-list th,
+    .edit_view_shifts th,
+    .history_page th,
+    .user-list th,
+    .site-list th {
+        font-weight: bolder;
+        font-size: 1.2rem !important;
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: #CCCCCC !important;
+        height: 32px !important;
+    }
+
+    .search-icon,
+    .search-undo,
+    .sort-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    .assign-list td,
+    .document-list td,
+    .edit_view_shifts td,
+    .history_page td,
+    .user-list td,
+    .site-list td {
+        font-size: 1rem !important;
+        padding-left: 2px;
+        padding-right: 2px;
+        height: 30px !important;
+    }
+
+    .alert-list td,
+    #action_td,
+    #warning_td{
+        font-size: 1rem !important;
+        padding-left: 2px;
+        padding-right: 2px;
+        height: 30px !important;
+    }
+
+    .manage_shift_btn,
+    .manage_shift_btn img {
+        height: 30px;
+        width: 30px;
+    }
+
+    #btn_placeholder {
+        height: 30px;
+        width: 33.4px;
+        margin-bottom: -3px;
+    }
+
+    #notification-badge {
+        width: 25px !important;
+        height: 25px !important;
+
+        font-size: 0.78rem !important;
+    }
+
+    #notification-badge_admin {
+        width: 20px !important;
+        height: 20px !important;
+
+        font-size: 0.78rem !important;
+    }
+
+    .language .flag_img {
+        margin: 0 20px -5px 20px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo {
+        margin: -5px auto;
+        width: 300px;
+        height: auto;
+    }
+
+    .edit-user-page {
+        height: 26vh !important;
+        padding: 0 !important;
+    }
+
+    .admin_page div {
+        width: 120px;
+        height: 120px;
+        margin: 1.2vh 2vw;
+        padding: 5px;
+        font-size: 1.1rem;
+        background-size: 175px 175px; /* Ensures the image covers the entire div */
+    }
+
+    .languages-container input[type="checkbox"]:checked {
+        width: 16px;
+    }
+
+    input, input[type="date"], input[type="text"], input[type="submit"], input[type="number"], .languages-container label {
+        font-size: 0.85rem !important;
+        height: 25.5px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    button, #btn-update {
+        font-size: 0.95rem !important;
+        height: 31.5px !important;
+        padding: 0 !important;
+        top: 30px;
+    }
+
+    select, option {
+        font-size: 0.85rem !important;
+        height: 27px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    label {
+        font-size: 1rem !important;
+        margin-top: 0 !important;
+        margin-bottom: -2px !important;
+    }
+
+    #admin_menu_img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .password, .passport, #password, #passport {
+        padding: 0 10px !important;
+    }
+
+    #top_menu_button {
+        height: 50px;
+        width: 50px;
+    }
+
+    #top_menu_button_search {
+        height: 50px;
+        width: 50px;
+    }
+
+    input[type="file"] {
+        padding-top: 5.5px !important;
+    }
+
+    #smart_report_buttons {
+        height: 65px;
+        width: 65px;
+    }
+}
+
+
+/* 2. Styles for Tablets / High-Resolution Mobiles */
+@media only screen and (min-width: 470px) and (max-width: 719.9px)
+{
+    body, .welcome {
+        font-size: 0.9rem;
+    }
+
+    .gauge-container {
+        height: 70px;
+        width: 140px;
+    }
+
+    .gauge-value {
+        font-size: 0.8rem !important;
+        bottom: 70% !important;
+    }
+
+    .needle {
+        height: 76%;
+        top: 24%;
+    }
+
+    .whatsapp-icon {
+        top: 5px;
+        right: 3vw;
+    }
+
+    .whatsapp-icon img {
+        width: 16px;
+        height: 16px;
+    }
+
+    #small_whatsapp_icon {
+        height: 14px;
+        width: 14px;
+    }
+
+    .assign-list th,
+    .document-list th,
+    .edit_view_shifts th,
+    .history_page th,
+    .user-list th,
+    .site-list th {
+        font-weight: bolder;
+        font-size: 0.90rem !important;
+        padding-left: 0.5px;
+        padding-right: 0.5px;
+        background-color: #CCCCCC !important;
+        height: 30px !important;
+    }
+
+    .alert-list th {
+        font-weight: bolder;
+        font-size: 0.90rem !important;
+        background-color: #CCCCCC !important;
+        height: 30px !important;
+    }
+
+    .search-icon,
+    .search-undo,
+    .sort-icon {
+        height: 13px;
+        width: 13px;
+    }
+
+    .assign-list td,
+    .document-list td,
+    .edit_view_shifts td,
+    .history_page td,
+    .user-list td,
+    .site-list td {
+        font-size: 0.78rem !important;
+        padding-left: 0.5px;
+        padding-right: 0.5px;
+        height: 28px !important;
+    }
+
+    .alert-list td,
+    #action_td,
+    #warning_td{
+        font-size: 0.78rem !important;
+        height: 28px !important;
+    }
+
+    .manage_shift_btn,
+    .manage_shift_btn img {
+        height: 28px;
+        width: 28px;
+    }
+
+    #btn_placeholder {
+        height: 28px;
+        width: 30.5px;
+        margin-bottom: -3px;
+    }
+
+    #notification-badge {
+        width: 25px !important;
+        height: 25px !important;
+
+        font-size: 0.78rem !important;
+    }
+
+    #notification-badge_admin {
+        width: 20px !important;
+        height: 20px !important;
+
+        font-size: 0.78rem !important;
+    }
+
+    .language .flag_img {
+        margin: 0 10px 0 10px;
+        width: 39px;
+        height: 39px;
+    }
+
+    .logo {
+        width: 275px;
+        height: auto;
+    }
+
+    .edit-user-page {
+        height: 26vh !important;
+        padding: 0 !important;
+    }
+
+    .admin_page div {
+        width: 110px;
+        height: 110px;
+        margin: 1.5vh 1vw;
+        padding: 5px;
+        font-size: 1.05rem;
+        background-size: 160px 160px; /* Ensures the image covers the entire div */
+    }
+
+    .languages-container input[type="checkbox"]:checked {
+        width: 12px;
+    }
+
+    input, input[type="date"], input[type="text"], input[type="submit"], input[type="number"], .languages-container label {
+        font-size: 0.8rem !important;
+        height: 24px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    button, #btn-update {
+        font-size: 0.85rem !important;
+        height: 30px !important;
+        padding: 0 !important;
+        top: 30px;
+    }
+
+    select, option {
+        font-size: 0.8rem !important;
+        height: 25px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    label {
+        font-size: 0.87rem !important;
+        margin-bottom: -2px !important;
+    }
+
+    #admin_menu_img {
+        width: 80px;
+        height: 80px;
+    }
+
+    footer {
+        font-size: 0.76rem;
+        margin-top: -26px;
+        letter-spacing: 1.6px;
+    }
+
+    .password, .passport, #password, #passport {
+        padding: 0 10px !important;
+    }
+
+    #top_menu_button {
+        height: 40px;
+        width: 40px;
+    }
+
+    #top_menu_button_search {
+        height: 40px;
+        width: 40px;
+    }
+
+    input[type="file"] {
+        padding-top: 5px !important;
+    }
+
+    #smart_report_buttons {
+        height: 50px;
+        width: 50px;
+        font-size: 0.7rem;
+        background-size: 65% 65%;
+    }
+}
+
+
+/* 3. Styles for Small/Low-Resolution Mobiles */
+@media only screen and (min-width: 360px) and (max-width: 469.9px)
+{
+    body, .welcome {
+        font-size: 0.8rem;
+    }
+
+    .gauge-container {
+        height: 50px;
+        width: 100px;
+    }
+
+    .gauge-value {
+        font-size: 0.7rem !important;
+    }
+
+    .needle {
+        height: 72%;
+        top: 28%;
+    }
+
+    .whatsapp-icon {
+        top: 3.7px;
+        right: 3vw;
+    }
+
+    .whatsapp-icon img {
+        width: 14px;
+        height: 14px;
+    }
+
+    #small_whatsapp_icon {
+        height: 10px;
+        width: 10px;
+    }
+
+    .assign-list th,
+    .document-list th,
+    .edit_view_shifts th,
+    .history_page th,
+    .user-list th,
+    .site-list th {
+        font-weight: bold;
+        font-size: 0.66rem !important;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #CCCCCC !important;
+        height: 25px !important;
+    }
+
+    .search-icon,
+    .search-undo,
+    .sort-icon {
+        height: 8px;
+        width: 8px;
+    }
+
+    .alert-list th {
+        font-weight: bold;
+        font-size: 0.66rem !important;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #CCCCCC !important;
+        height: 25px !important;
+    }
+
+    .assign-list td,
+    .document-list td,
+    .edit_view_shifts td,
+    .history_page td,
+    .user-list td,
+    .site-list td {
+        font-size: 0.55rem !important;
+        padding-left: 0;
+        padding-right: 0;
+        height: 21px !important;
+    }
+
+    .alert-list td,
+    #action_td,
+    #warning_td{
+        font-size: 0.55rem !important;
+        height: 21px !important;
+    }
+
+    .manage_shift_btn,
+    .manage_shift_btn img {
+        height: 21px;
+        width: 21px;
+    }
+
+    #btn_placeholder {
+        height: 21px;
+        width: 23px;
+        margin-bottom: -3px;
+    }
+
+    #notification-badge{
+        width: 24px !important;
+        height: 24px !important;
+
+        font-size: 0.7rem !important;
+    }
+
+    #notification-badge_admin {
+        width: 18px !important;
+        height: 18px !important;
+
+        font-size: 0.6rem !important;
+    }
+
+    .language .flag_img {
+        margin: 0 7px 0 7px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .logo {
+        width: 225px;
+        height: auto;
+    }
+
+    .edit-user-page {
+        height: 26vh !important;
+    }
+
+    .admin_page div {
+        width: 70px;
+        height: 70px;
+        margin: 0.2vh 0.5vw;
+        padding: 5px;
+        font-size: 0.7rem;
+        background-size: 110px 110px; /* Ensures the image covers the entire div */
+    }
+
+    .languages-container input[type="checkbox"]:checked {
+        width: 11px;
+    }
+
+    input, input[type="date"], input[type="text"], input[type="submit"], input[type="number"], .languages-container label {
+        font-size: 0.65rem !important;
+        height: 20px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    button, #btn-update {
+        font-size: 0.7rem !important;
+        height: 26px !important;
+        padding: 0 !important;
+        top: 20px;
+    }
+
+    select, option {
+        font-size: 0.65rem !important;
+        height: 21px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    label {
+        font-size: 0.75rem !important;
+    }
+
+    #admin_menu_img {
+        width: 50px;
+        height: 50px;
+    }
+
+    footer {
+        font-size: 0.72rem;
+        margin-top: -25px;
+        letter-spacing: 1.5px;
+    }
+
+    .password, .passport, #password, #passport {
+        padding: 0 10px !important;
+    }
+
+    #top_menu_button {
+        height: 34px;
+        width: 34px;
+    }
+
+    #top_menu_button_search {
+        height: 34px;
+        width: 34px;
+    }
+
+    input[type="file"] {
+        padding-top: 3.5px !important;
+    }
+
+    #smart_report_buttons {
+        height: 37px;
+        width: 37px;
+        font-size: 0.52rem;
+        background-size: 55% 55%;
+    }
+}
+
+
+/* 4. Styles for Very Low-Resolution Devices */
+@media only screen and (max-width: 359.9px)
+{
+    body, .welcome {
+        font-size: 0.67rem;
+    }
+
+    .gauge-container {
+        height: 35px;
+        width: 70px;
+    }
+
+    .gauge-value {
+        font-size: 0.55rem !important;
+        bottom: 64% !important;
+    }
+
+    .needle {
+        height: 65%;
+        top: 35%;
+    }
+
+    .whatsapp-icon {
+        top: 3px;
+        right: 10.5px;
+    }
+
+    .whatsapp-icon img {
+        width: 12px;
+        height: 12px;
+    }
+
+    #small_whatsapp_icon {
+        height: 8px;
+        width: 8px;
+    }
+
+    .assign-list th,
+    .document-list th,
+    .edit_view_shifts th,
+    .history_page th,
+    .user-list th,
+    .site-list th {
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #CCCCCC !important;
+        height: 20px !important;
+    }
+
+    .search-icon,
+    .search-undo,
+    .sort-icon {
+        height: 6px;
+        width: 6px;
+    }
+
+    .alert-list th {
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #CCCCCC !important;
+        height: 20px !important;
+    }
+
+    .assign-list td,
+    .document-list td,
+    .edit_view_shifts td,
+    .history_page td,
+    .user-list td,
+    .site-list td {
+        font-size: 0.5rem !important;
+        padding-left: 0;
+        padding-right: 0;
+        height: 16px !important;
+    }
+
+    .alert-list td,
+    #action_td,
+    #warning_td{
+        font-size: 0.5rem !important;
+        height: 18px !important;
+    }
+
+    .manage_shift_btn,
+    .manage_shift_btn img {
+        height: 18px;
+        width: 18px;
+    }
+
+    #btn_placeholder {
+        height: 18px;
+        width: 19px;
+        margin-bottom: -3px;
+    }
+
+    #notification-badge {
+        width: 18px !important;
+        height: 18px !important;
+
+        font-size: 0.6rem !important;
+    }
+
+    #notification-badge_admin {
+        width: 12px !important;
+        height: 12px !important;
+
+        font-size: 0.55rem !important;
+    }
+
+    .language .flag_img {
+        margin: 0 5px 0 5px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .logo {
+        width: 200px;
+        height: auto;
+    }
+
+    .edit-user-page {
+        height: 26vh !important;
+    }
+
+    .admin_page div {
+        width: 55px;
+        height: 55px;
+        margin: 0.2vh 0.5vw;
+        padding: 5px;
+        font-size: 0.65rem;
+        background-size: 90px 90px; /* Ensures the image covers the entire div */
+    }
+
+    .languages-container input[type="checkbox"]:checked {
+        width: 11px;
+    }
+
+    input, input[type="date"], input[type="text"], input[type="submit"], input[type="number"], .languages-container label {
+        font-size: 0.55rem !important;
+        height: 16px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    button, #btn-update {
+        font-size: 0.6rem !important;
+        height: 22px !important;
+        padding: 0 !important;
+        top: 10px;
+    }
+
+    select, option {
+        font-size: 0.55rem !important;
+        height: 17px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    label {
+        font-size: 0.7rem !important;
+    }
+
+    #admin_menu_img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        font-size: 0.65rem;
+        margin-top: -22px;
+        letter-spacing: 1.1px;
+    }
+    .search_box {
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    .password, .passport, #password, #passport {
+        padding: 0 10px !important;
+    }
+
+    #top_menu_button {
+        height: 28px;
+        width: 28px;
+    }
+
+    #top_menu_button_search {
+        height: 28px;
+        width: 28px;
+    }
+
+    #hide_when_small {
+        display: none;
+    }
+
+    input[type="file"] {
+        padding-top: 1.2px !important;
+    }
+
+    #smart_report_buttons {
+        height: 35px;
+        width: 35px;
+        font-size: 0.5rem;
+        background-size: 50% 50%;
+    }
+}
+
+
+#floating-menu {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    min-width: 180px;
+    width: 25vw;
+    max-width: 300px;
+    margin-top: 25vh;
+}
+
+#filter-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#filter-form input[type="checkbox"] {
+    width: 2%;
+    padding: 5px;
+}
+
+#floating-menu button {
+    margin: 4px;
+    padding: 8px 14px;
+    min-width: 80px;
+    width: 7.5vw;
+    max-width: 135px;
+    background: linear-gradient(180deg, lawngreen, darkolivegreen);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#floating-menu button:hover {
+    background: linear-gradient(180deg, greenyellow, green);
+}
+
+#floating-menu button[type="button"] {
+    margin: 4px;
+    padding: 8px 14px;
+    width: 7.5vw;
+    min-width: 80px;
+    max-width: 135px;
+    background: linear-gradient(180deg, red, darkred);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#floating-menu button[type="button"]:hover {
+    background: linear-gradient(-180deg, indianred, red);
+}
+
+::placeholder {
+    color: #555555;
+    letter-spacing: 0.8px;
+}
